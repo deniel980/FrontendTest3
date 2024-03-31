@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 import axios from "axios";
 
 import CardContainer from "@/components/organisms/3d-card";
@@ -183,6 +184,20 @@ const MainPage = () => {
 
   return (
     <div className="flex md:w-screen md:h-screen h-[88vh] w-screen flex-col items-center justify-between px-[3vw] py-[0vw] mx-auto overflow-hidden">
+      <Head>
+        <title>Cool Title</title>
+        <meta
+          name="description"
+          content="Checkout the best Weather"
+          key="desc"
+        />
+        <meta property="og:title" content="BestWeather" />
+        <meta
+          property="og:description"
+          content="Check out the best Weather App"
+        />
+        <meta property="og:image" content="" />
+      </Head>
       <div className="z-10 w-full items-center justify-between font-SixCaps md:text-[8vw] text-[20vw] mx-auto">
         <div id="kindaHeader" className="md:flex gap-[10vw]">
           <div id="title" className="translate-x-[-300%]">
