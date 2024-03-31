@@ -180,7 +180,7 @@ const MainPage = () => {
   }, [weather, city]);
 
   return (
-    <div className="flex md:h-screen md:w-screen md:h-screen h-[88vh] w-screen flex-col items-center justify-between px-[3vw] py-[0vw] mx-auto overflow-hidden">
+    <div className="flex md:w-screen md:h-screen h-[88vh] w-screen flex-col items-center justify-between px-[3vw] py-[0vw] mx-auto overflow-hidden">
       <div className="z-10 w-full items-center justify-between font-SixCaps md:text-[8vw] text-[20vw] mx-auto">
         <div id="kindaHeader" className="md:flex gap-[10vw]">
           <div id="title" className="translate-x-[-300%]">
