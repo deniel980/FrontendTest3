@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 
+import CardContainer from "@/components/organisms/3d-card";
+
 const MainPage = () => {
   const [weather, setWeather] = useState<any>(null);
   const [city, setCity] = useState("Los Angeles");
@@ -219,11 +221,7 @@ const MainPage = () => {
               id="temperature"
               className="translate-x-[-400%] z-40 h-[22vw] w-[22vw] text-[52vw] md:text-[23vw]"
             >
-              {weather ? (
-                <div>{weather.current.temp_c}°C</div>
-              ) : (
-                "..."
-              )}
+              {weather ? <div>{weather.current.temp_c}°C</div> : "..."}
             </div>
             <div
               id="condition"
@@ -236,17 +234,24 @@ const MainPage = () => {
               )}
             </div>
           </div>
-          <div id="maps">
-            <Image
-              loading="eager"
-              priority={true}
-              id="currentMap"
-              className="translate-x-[500%] md:w-[34vw] md:h-[25vw] w-screen h-[220px] md:mt-[3vw] mt-0 mr-[7vw]"
-              width={600}
-              height={500}
-              src={`/maps/${currentMap}.png`}
-              alt="map"
-            ></Image>
+          <div className="mt-[-15vw] md:mt-[-5vw] mr-[5vw]">
+            <CardContainer
+              className="cardX"
+              containerClassName="cardContainerX"
+            >
+              <div id="maps">
+                <Image
+                  loading="eager"
+                  priority={true}
+                  id="currentMap"
+                  className="translate-x-[500%] md:w-[34vw] md:h-[25vw] w-screen h-[220px] md:mt-[3vw] mt-0 mr-[7vw]"
+                  width={600}
+                  height={500}
+                  src={`/maps/${currentMap}.png`}
+                  alt="map"
+                ></Image>
+              </div>
+            </CardContainer>
           </div>
         </div>
       </div>

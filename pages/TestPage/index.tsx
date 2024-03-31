@@ -1,5 +1,7 @@
+import CardContainer from "@/components/organisms/3d-card";
+
 const TestPage = () => {
-  return <div>HI!</div>;
+  return <div></div>;
 };
 
 export default TestPage;
